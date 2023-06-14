@@ -89,6 +89,7 @@ func (tm *TPSMonitor) StartTpsForBlockRange() {
 	tm.init()
 	log.Infof("tps calc started - fromBlock:%v toBlock:%v\n", tm.fromBlk, tm.toBlk)
 	tm.calcTpsFromBlockRange()
+	tm.Stop()
 }
 
 // starts service to calculate tps
